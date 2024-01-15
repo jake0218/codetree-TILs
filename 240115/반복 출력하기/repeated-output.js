@@ -4,6 +4,6 @@ function printStars(n){
     }
 }
 
-let n = (Math.random() * 100 ) + 1
-
-printStars(n)
+const fs = require("fs");
+let rowNum = Number(fs.readFileSync(0).toString().trim());
+printStars(rowNum);

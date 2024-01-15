@@ -4,4 +4,6 @@ function printStars(n){
     }
 }
 
-printStars(4)
+let n = (Math.random() * 100 ) + 1
+
+printStars(n)

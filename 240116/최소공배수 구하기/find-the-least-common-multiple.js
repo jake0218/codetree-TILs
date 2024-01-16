@@ -1,16 +1,18 @@
 const fs = require("fs");
 let [n, m] = fs.readFileSync(0).toString().trim().split(" ").map(Number);
 
-function getLCM(n,m) {
-    let lcm = 1;
-
-    while(true) {
-        if((lcm % n === 0)&&(lcm % m === 0)){
-            break
-        }
-        lcm ++
+function getGCD(a, b) {
+    while (b !== 0) {
+        let t = b;
+        b = a % b;
+        a = t;
     }
-    return lcm
+    return a;
 }
 
-console.log(getLCM(12,18))
+function getLCM(n, m) {
+    let gcd = getGCD(n, m);
+    return (n * m) / gcd;
+}
+
+console.log(getLCM(12, 18));

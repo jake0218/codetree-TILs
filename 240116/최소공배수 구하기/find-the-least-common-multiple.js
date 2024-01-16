@@ -13,4 +13,4 @@ function getLCM(n,m) {
     return lcm
 }
 
-console.log(getLCM(12,18))
+console.log(getLCM(n,m))

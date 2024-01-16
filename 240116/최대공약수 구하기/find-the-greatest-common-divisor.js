@@ -9,7 +9,7 @@ let getGCD = (num1, num2) => {
             gcd = i;
         }
     }
-    return gcd;
+   process.stdout.write(gcd + "\n");
 }
 
-console.log(getGCD(12,18))
+(getGCD(12,18))

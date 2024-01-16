@@ -1,15 +1,15 @@
 const fs = require("fs");
-let [num1, num2] = fs.readFileSync(0).toString().trim().split(" ").map(Number);
+let [n, m] = fs.readFileSync(0).toString().trim().split(" ").map(Number);
 
-let getGCD = (num1, num2) => {
+function getGcd(n, m) {
     let gcd = 1;
 
-    for(let i = 1; i <= Math.min(num1,num2); i++) {
-        if(num1 % i === 0 && num2 % i === 0){
+    for(let i = 1; i <= Math.min(n,m); i++) {
+        if(n % i === 0 && m % i === 0){
             gcd = i;
         }
     }
    process.stdout.write(gcd + "\n");
 }
 
-(getGCD(12,18))
+(getGcd(12,18))

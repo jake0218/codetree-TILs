@@ -1,3 +1,6 @@
+const fs = require("fs");
+let [n, m] = fs.readFileSync(0).toString().trim().split(" ").map(Number);
+
 let getGCD = (num1, num2) => {
     let gcd = 1;
 

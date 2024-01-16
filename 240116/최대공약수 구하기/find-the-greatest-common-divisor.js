@@ -12,4 +12,4 @@ function getGcd(n, m) {
    process.stdout.write(gcd + "\n");
 }
 
-(getGcd(12,18))
+(getGcd(n,m))

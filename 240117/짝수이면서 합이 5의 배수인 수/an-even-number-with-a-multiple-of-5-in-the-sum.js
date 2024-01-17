@@ -1,17 +1,13 @@
 const fs = require("fs")
+let number = Number(fs.readFileSync(0).toString().trim())
 
-function handleMakeNumber(min, max){
-    return Math.floor(Math.random() * (max - min) + min)
+function handleCheckFn(number){
+    const isEven = number % 2 === 0;
+    const isSumOfDigit = Math.floor((number / 10) + (number % 10))
+    const isCheckByFive = isSumOfDigit % 5 === 0
+
+    return (isEven && isCheckByFive) ? "Yes" : "No";
+
 }
 
-let number = handleMakeNumber(10,100)
-
-function handleCheckFn(){
-    if(number > 9 && number <100) {
-        return console.log("Yes")
-    } else {
-        return console.log("No")
-    }
-}
-
-handleCheckFn(number)
+console.log(handleCheckFn(number))

@@ -3,7 +3,7 @@ function devideFn(number) {
     for(let i =0; i <= number; i++){
         answer += i
     }
-    return (answer / 10)
+    return Math.trunc((answer / 10))
 }
 
 

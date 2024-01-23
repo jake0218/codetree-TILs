@@ -17,7 +17,7 @@ switch(o) {
         result = `${a} ${o} ${c} = ${a * c}`
         break;
     case '/':
-        result = `${a} ${o} ${c} = ${Math.floor(a + c)}`
+        result = `${a} ${o} ${c} = ${Math.floor(a / c)}`
         break;
     default:
         result = 'False'

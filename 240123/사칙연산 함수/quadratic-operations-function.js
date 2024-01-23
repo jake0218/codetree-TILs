@@ -1,25 +1,26 @@
 const fs = require("fs")
 let input = fs.readFileSync(0).toString().trim()
 let [a, o, c] = input.split(' ');
-let a = map(Number);
-let c = map(Number);
+
+a = Number(a);
+c = Number(c);
 
 let result;
 switch(o) {
     case '+':
-        result = a + c;
+        result = `${a} ${o} ${c} = ${a + c}`
         break;
     case '-':
-        result = a - c;
+        result = `${a} ${o} ${c} = ${a - c}`
         break;
     case '*':
-        result = a * c;
+        result = `${a} ${o} ${c} = ${a * c}`
         break;
     case '/':
-        result = Math.floor(a / c);
+        result = `${a} ${o} ${c} = ${Math.floor(a + c)}`
         break;
     default:
-        result = false
+        result = 'False'
 }
 
 console.log(result)

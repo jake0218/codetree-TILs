@@ -9,7 +9,7 @@ const isVaildDate = (M, D) => {
         return false
     }
 
-    if( D < 1 || D > daysInMonth) {
+    if( D < 1 || D > daysInMonth[M]) {
         return false
     }
 
